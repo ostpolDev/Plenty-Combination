@@ -134,7 +134,10 @@ app.get("/element", async (req, res) => {
 
 })
 
+const PORT = process.env.ELEMENT_HOST_PORT || 3000;
+const HOSTNAME = process.env.ELEMENT_HOSTNAME || "127.0.0.1"
+
 // Hosting the app locally
-app.listen(process.env.ELEMENT_PORT || 3000, process.env.ELEMENT_HOSTNAME || "127.0.0.1", () => {
-    console.log("App listening!");
+app.listen(PORT, HOSTNAME, () => {
+    console.log(`App listening on http://${HOSTNAME}:${PORT}/`);
 })
