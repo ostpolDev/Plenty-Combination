@@ -37,6 +37,9 @@ aside {
     cursor: pointer;
     user-select: none;
     background-color: white;
+    /* Fix for long words */
+    word-wrap: break-word;
+    max-width: 100%;
 }
 
 .element span:first-of-type {
