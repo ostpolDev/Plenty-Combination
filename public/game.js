@@ -196,7 +196,11 @@ function CreateElement(emoji, name) {
 
     // Create the Emoji element
     let emojiElement = document.createElement("span");
-    emojiElement.innerHTML = twemoji.parse(emoji); // Use twemoji to display the emoji
+
+    // Use twemoji to display the emoji
+    emojiElement.innerHTML = twemoji.parse(emoji, {
+        base: "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/"
+    });
     element.appendChild(emojiElement);
 
     // Create the name element
